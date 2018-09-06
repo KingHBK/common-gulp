@@ -1,0 +1,9 @@
+/dest
+/node_modules
+/**/node_modules
+/.idea
+*.log
+/**/*.DS_Store
+/.vscode/settings.json
+/package-lock.json
+launch.json
