@@ -1,16 +1,21 @@
+## 开发文档
+*   [DEMO](https://github.com/zfhslfgit/common-gulp.git)
 ## 目录结构规范
 ```
 └── demo/                        // 活动
     ├── dest/                    // 输出目录
     │   ├── assets/      
     │   │   ├── js       
-    │   │   ├── images       
-    │   │   └── css           
+    │   │   ├── css              
+    │   │   └── px2rem           
     ├── src/                     // 源码目录
     │   ├── assets/              // 资源目录
     │   │   ├── js               // js
     │   │   ├── images           // 图片 
-    │   │   └── css              // 样式（less）
+    │   │   ├── css              // 样式（less）
+    │   │   └── px2rem           // 移动端样式（less）
+    ├── html
+    │   ├──index.html            //页面
     ├── index.html
     ├── .gitignore           
     ├── .eslintrc                // eslint规则配置
@@ -33,7 +38,7 @@
         * ```.block__element_modifier{} ```
         * ```.block_modifier{}```
 
-* js、css不能直接写到html里面，要放放到对应的目录
+* js、css不能直接写到html里面，要放到对应的目录
 * 移动端使用**Flexible**适配（这个必须要注意）
     * src文件里需要写px,gulp会自动转化为rem
     * 建议出设计图750宽的标准设计，这样可以按设计稿像素写CSS，比如10像素就是10px

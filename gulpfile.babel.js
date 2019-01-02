@@ -22,7 +22,8 @@ const BUILD = {};
 BUILD.DEST = './dest/';
 BUILD.SRC = {};
 BUILD.SRC.ROOT = './src';
-BUILD.SRC.CSS = [`${BUILD.SRC.ROOT}/**/*.less`];
+BUILD.SRC.CSS = [`${BUILD.SRC.ROOT}/**/css/**/*.less`];
+BUILD.SRC.REM = [`${BUILD.SRC.ROOT}/**/px2rem/**/*.less`];
 BUILD.SRC.JS = [`${BUILD.SRC.ROOT}/**/*.js`];
 BUILD.SRC.IMAGE = [`${BUILD.SRC.ROOT}/**/images/*`];
 BUILD.SRC.WATCH = [...BUILD.SRC.CSS, ...BUILD.SRC.JS, ...BUILD.SRC.IMAGE];
@@ -41,7 +42,7 @@ gulp.task('jsTask', () => {
     .pipe(gulp.dest(BUILD.DEST));
 });
 
-gulp.task('lessTask', () => {
+gulp.task('remTask', () => {
   const cleancss = new LessPluginCleanCSS({
 	  advanced: true,
   });
@@ -50,13 +51,32 @@ gulp.task('lessTask', () => {
 	  cascade: true,
   });
   const confTaskName = 'less';
-  gulp.src(BUILD.SRC.CSS)
+  gulp.src(BUILD.SRC.REM)
     .pipe(plumber())
     .pipe(cached(confTaskName))
     .pipe(progeny())
     .pipe(debug({ title: `🚌 ...  ${confTaskName}:` }))
     .pipe(less({ plugins: [autoprefix, cleancss] }))
     .pipe(postcss([px2rem({ remUnit: 75 })]))
+    .pipe(postcss([cssnano({ preset: 'default' })]))
+    .pipe(gulp.dest(BUILD.DEST));
+});
+
+gulp.task('lessTask', () => {
+  const cleancss = new LessPluginCleanCSS({
+    advanced: true,
+  });
+  const autoprefix = new LessPluginAutoPrefix({
+    browsers: ['last 5 versions'],
+    cascade: true,
+  });
+  const confTaskName = 'less';
+  gulp.src(BUILD.SRC.CSS)
+    .pipe(plumber())
+    .pipe(cached(confTaskName))
+    .pipe(progeny())
+    .pipe(debug({ title: `🚌 ...  ${confTaskName}:` }))
+    .pipe(less({ plugins: [autoprefix, cleancss] }))
     .pipe(postcss([cssnano({ preset: 'default' })]))
     .pipe(gulp.dest(BUILD.DEST));
 });
@@ -68,7 +88,7 @@ gulp.task('imageTask', () => {
     .pipe(gulp.dest(BUILD.DEST));
 });
 
-const devTasks = ['jsTask', 'lessTask', 'imageTask'];
+const devTasks = ['jsTask', 'lessTask', 'remTask', 'imageTask'];
 
 gulp.task('dev', devTasks, () => {
   const { reload } = bs;
@@ -80,7 +100,7 @@ gulp.task('dev', devTasks, () => {
     },
   });
   gulp.watch(BUILD.SRC.WATCH).on('change', () => {
-    runSequence('jsTask', 'lessTask', 'imageTask', reload);
+    runSequence('jsTask', 'lessTask', 'remTask', 'imageTask', reload);
   });
 });
 
