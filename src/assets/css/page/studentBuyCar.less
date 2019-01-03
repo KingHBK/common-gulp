@@ -1,0 +1,179 @@
+@import './../lib/base.less';
+
+.container() {
+  width: 1230px;
+  margin: 0 auto;
+}
+
+.main-container-none {
+  width: 1230px;
+  .container();
+}
+
+.main-container {
+  background-color: #FFFFFF;
+  .container();
+}
+
+.student-buy-car-1 {
+  .back-page {
+    margin: 20px 0 20px 150px;
+    .btn-common(120px, 30px, 14px, #999999);
+  }
+}
+
+.student-buy-car-2 {
+  .img-1 {
+    width: 100%;
+    height: 300px;
+  }
+  .img-2 {
+    width: 100%;
+    height: 415px;
+  }
+}
+
+.student-buy-car-3 {
+  .title {
+    width: 110px;
+    margin: 35px auto;
+    font-size: 24px;
+    padding-bottom: 9px;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+  }
+  .img-box {
+    .img-1 { width: 600px; height: 300px; margin-right: 26px; }
+    .img-2 { width: 600px; height: 300px; }
+  }
+  .img-introduce {
+    overflow: hidden;
+    .introduce() {
+      width: 600px;
+      padding: 20px 0;
+      float: left;
+      font-size: 18px;
+      text-align: center;
+    }
+    .introduce-1 {
+      margin-right: 30px;
+      .introduce();
+    }
+    .introduce-2 {
+      .introduce();
+    }
+  }
+}
+
+.student-buy-car-4 {
+  .top {
+    margin: 7px auto 40px;
+    width: 476px;
+    text-align: center;
+    .title { font-size: 24px; padding: 9px 0; }
+    .introduce { font-size: 14px; color: #999999; }
+  }
+}
+
+.student-buy-car-5 { margin-top: 40px; }
+
+.student-buy-car-6 {
+  margin-top: 40px;
+  .img-1 {
+    width: 100%;
+    height: 300px;
+  }
+  .img-2 {
+    width: 100%;
+    height: 791px;
+  }
+}
+
+.student-buy-car-7 {
+  margin-top: 40px;
+  .info-form-title {
+    background-color: #000000;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .info-form:after{ display: block; clear: both; content: ""; visibility: hidden; height: 0; }
+  .info-form {
+    zoom: 1;
+    padding: 40px 160px;
+    .info-margin { margin-right: 20px; }
+    .main-form {
+      float: left;
+      width: 530px;
+      margin-right: 79px;
+      .info-title {
+        border-left: 4px solid @theme;
+        padding-left: 10px;
+        font-size: 18px;
+      }
+      .info-block:after{ display: block; clear: both; content: ""; visibility: hidden; height: 0; }
+      .info-block {
+        zoom: 1;
+        .info-item {
+          float: left;
+          width: 255px;
+          .layui-form-select dl dd.layui-this {
+            background-color: @background;
+            color: @theme;
+          }
+          .title {
+            padding: 20px 0;
+            font-size: 16px;
+            span { color: @theme; }
+          }
+        }
+        .verfiy-code {
+          input { width: 155px; float: left; }
+          .layui-btn { width: 100px; font-size: 12px; background-color: @theme; color: #FFFFFF; }
+          .layui-btn.act { background-color: @background; color: #C9C9C9; }
+        }
+      }
+      .info-hr {
+        border-top: 1px solid @background;
+        margin: 35px 0;
+      }
+    }
+    .layui-elem-field {
+      margin: 40px 0 0;
+      legend {
+        margin: 0 auto;
+        font-size: 12px;
+        span { color: @theme; }
+      }
+    }
+    .info-submit {
+      padding: 35px 0 40px;
+      text-align: center;
+      button {
+        height: 40px;
+        background-color: @theme;
+        color: #FFFFFF;
+        width: 255px;
+        font-size: 16px;
+      }
+    }
+    .right-img-box {
+      width: 300px;
+      float: left;
+      .img-1 { width: 100%; height: 375px; }
+      .img-2 { width: 100%; height: 60px; margin-top: 10px; }
+    }
+  }
+}
+
+.student-buy-car-8 {
+  margin-top: 40px;
+  .layui-colla-title {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 16px;
+    .layui-icon { color: @theme; }
+  }
+  .layui-colla-content { border: 0; font-size: 16px; color: #666666; }
+}
