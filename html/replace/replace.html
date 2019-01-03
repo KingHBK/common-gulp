@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://s.chebaba.com/css/layui/2.4.3/layui.css">
+  <link rel="stylesheet" type="text/css" href="../../dest/assets/css/page/replace.css">
+</head>
+<body>
+	<div class="main-container">
+    <div class="top-image">
+      <div class="title">汽车评估工具</div>
+      <div class="desc">汽车评估工具可以帮助您在购买或二手车购买时做出明智的决定，为您提供准确的价格和零售价值，价格取决于您的汽车的年份，品牌，型号和选项。</div>
+    </div>
+    <div class="desc-title">描述</div>
+    <form class="main-form layui-form" action="">
+      <div class="info-title">您的爱车信息</div>
+      <div class="info-block">
+        <div class="info-item info-margin">
+          <div class="title"><span>*</span>车辆信息</div>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-item info-margin">
+          <select name="" lay-verify="required">
+            <option value="">选择车款</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select> 
+        </div>
+        <div class="info-item info-margin">
+          <select name="" lay-verify="required">
+            <option value="">选择车型</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select> 
+        </div>
+        <div class="info-item info-margin">
+          <select name="" lay-verify="required">
+            <option value="">年款</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select> 
+        </div>
+        <div class="info-item">
+          <select name="" lay-verify="required">
+            <option value="">行驶里程</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select> 
+        </div>
+      </div>
+      <div class="info-hr"></div>
+      <div class="info-title">个人信息</div>
+      <div class="info-block">
+        <div class="info-item info-margin">
+          <div class="title"><span>*</span>称谓</div>
+        </div>
+        <div class="info-item info-margin">
+          <div class="title"><span>*</span>姓</div>
+        </div>
+        <div class="info-item info-margin">
+          <div class="title"><span>*</span>名</div>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-item info-margin">
+          <select name="" lay-verify="required">
+            <option value="">选择车款</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select> 
+        </div>
+        <div class="info-item info-margin">
+          <input type="text" name="" lay-verify="required" placeholder="请输入您的姓氏" autocomplete="off" class="layui-input" />
+        </div>
+        <div class="info-item info-margin">
+          <input type="text" name="" lay-verify="required" placeholder="请输入您的名字" autocomplete="off" class="layui-input" />
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-item info-margin">
+          <div class="title"><span>*</span>所在城市</div>
+        </div>
+        <div class="info-item info-margin">
+          <div class="title"><span></span></div>
+        </div>
+        <div class="info-item info-margin">
+          <div class="title"><span>*</span>移动电话</div>
+        </div>
+        <div class="info-item">
+          <div class="title"><span>*</span>验证码</div>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-item info-margin">
+          <select name="" lay-verify="required">
+            <option value="">选择省份</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select> 
+        </div>
+        <div class="info-item info-margin">
+          <select name="" lay-verify="required">
+            <option value="">选择城市</option>
+            <option value="a">111</option>
+            <option value="b">222</option>
+            <option value="c">333</option>
+          </select>
+        </div>
+        <div class="info-item info-margin">
+          <input type="text" id="mobile" name="" lay-verify="required|checkPhone" placeholder="请输入移动电话" autocomplete="off" class="layui-input" />
+        </div>
+        <div class="info-item verfiy-code">
+          <input type="text" name="" lay-verify="required" placeholder="请输入手机验证码" autocomplete="off" class="layui-input" />
+          <div id="verfiyCodeBtn" onclick="getVerfiyCode()" class="layui-btn">获取验证码</div>
+        </div>
+      </div>
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>通过本网站收集的信息将根据<span>日产的隐私政策进行处理</span></legend>
+      </fieldset>
+      <div class="info-submit">
+        <button lay-submit class="layui-btn">在线评估</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="main-container">
+    <div class="bottom-photo">
+      <img class="info-margin" src="./../../dest/assets/images/test_QR.png" />
+      <img src="./../../dest/assets/images/test_QR.png" />
+    </div>
+    <div class="bottom-introduce">
+      <div>需要更多帮助吗？</div>
+      <div>如需更多帮助，请于周一至周日 9:00 ~ 21:00（400-830-8889）联系日产客服，或联系您当地的经销商。</div>
+    </div>
+    <div class="bottom-button">
+      <button class="layui-btn">找到当地经销商></button>
+    </div>
+  </div>
+
+  <script src="https://s.chebaba.com/3rd/layui/2.4.3/layui.js"></script>
+  <script src="../../dest/assets/js/page/replace.js"></script>
+</body>
+</html>
