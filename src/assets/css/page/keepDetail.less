@@ -1,0 +1,142 @@
+@import './../lib/base.less';
+
+.main-container {
+  width: 1230px;
+  background-color: #FFFFFF;
+  margin: 40px auto 0;
+  .top-image {
+    background: url('@{images}/test_QR.png');
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 100px;
+    .title {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-size: 20px;
+      text-align: center;
+      padding: 6px 0;
+    }
+    .desc {
+      color: #FFFFFF;
+      font-size: 14px;
+      text-align: center;
+      padding-top: 18px;
+    }
+  }
+  .desc-title {
+    margin: 20px auto 40px auto;
+    padding: 8px 0;
+    width: 220px;
+    text-align: center;
+    font-size: 18px;
+    background-color: @background;
+  }
+  .bottom-photo {
+    padding: 40px 53px;
+    img { width: 550px; height: 300px; }
+  }
+  .bottom-introduce {
+    margin: 0 auto;
+    text-align: center;
+    width: 410px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .bottom-button {
+    padding: 37px 0 57px;
+    text-align: center;
+    button {
+      height: 35px;
+      background-color: @theme;
+      color: #FFFFFF;
+      width: 140px;
+      font-size: 14px;
+    }
+  }
+  .car-info {
+    overflow: hidden;
+    width: 615px;
+    margin: 40px auto 0;
+    .left {
+      width: 300px;
+      height: 200px;
+      float: left;
+      margin-right: 35px;
+      img { width: 100%; height: 100%; }
+    }
+    .right {
+      float: left;
+      width: 280px;
+      .car-name {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 20px;
+      }
+      .car-data {
+        background-color: #E2EEF5;
+        font-size: 14px;
+        padding: 5px 0;
+        text-align: center;
+        margin-top: 15px;
+      }
+    }
+  }
+  .back-step {
+    padding: 35px 20px 20px;
+    overflow: hidden;
+    button {
+      float: right;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #BDBDBD;
+      color: #999999;
+      background-color: #FFFFFF;
+      width: 120px;
+      font-size: 14px;
+    }
+  }
+}
+
+.keep-advice {
+  .title {
+    overflow: hidden;
+    .left {
+      float: left;
+      width: 244px;
+      background-color: @theme;
+      color: #FFFFFF;
+      padding: 8px 0 7px 16px;
+      font-size: 18px;
+    }
+    .right {
+      float: left;
+      width: 950px;
+      font-size: 14px;
+      padding: 10px 0 10px 20px;
+      background-color: #000000;
+      color: #B1B1B1;
+    }
+  }
+  .advice {
+    padding: 18px 25px 60px;
+    .piece {
+      margin-top: 10px;
+      background-color: @background;
+      font-size: 14px;
+      padding: 10px 0;
+      overflow: hidden;
+      .left {
+        padding-left: 20px;
+        width: 177px;
+        float: left;
+        border-right: 1px solid #000000;
+      }
+      .right {
+        width: 931px;
+        padding-left: 50px;
+        float: left;
+      }
+    }
+  }
+}
