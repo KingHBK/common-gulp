@@ -1,0 +1,75 @@
+@import './../lib/base.less';
+
+.container() {
+  width: 1230px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main-container-none {
+  width: 1230px;
+  .container();
+}
+
+.main-container {
+  background-color: #FFFFFF;
+  .container();
+}
+
+.left-nav {
+  float: left;
+  background-color: #FFFFFF;
+  margin-right: 20px;
+  width: 180px;
+  padding: 40px 0 0 50px;
+  .nav-block {
+    padding-bottom: 20px;
+    .title {
+      font-size: 18px;
+      padding-bottom: 20px;
+    }
+    .option {
+      font-size: 14px;
+      color: #666666;
+      padding-bottom: 20px;
+    }
+    .option.act { color: @theme; }
+  }
+}
+
+.right-container {
+  float: left;
+  width: 980px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+.message-container {
+  padding: 10px 40px;
+  .read-all {
+    padding: 35px 0;
+    button {
+      border: 1px solid @theme;
+      width: 100px;
+      height: 30px;
+      font-size: 14px;
+      color: @theme;
+      line-height: 30px;
+      background-color: #FFFFFF;
+    }
+  }
+  .message-option {
+    width: 100%;
+    padding: 0 20px;
+    background-color: @background;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    .title { padding: 17px 0; font-size: 14px; }
+    .bottom {
+      padding-bottom: 15px;
+      .detail { float: right; color: #5584FF; font-size: 14px; }
+      .time { color: #8FABBC; font-size: 14px; }
+    }
+  }
+  .message-option.act .title { color: @theme; }
+}
