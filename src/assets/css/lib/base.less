@@ -18,6 +18,13 @@ html, body {
     background-color: @bg;
 }
 
+// 不换行，超出省略
+.nowrap-hidden() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .left-nav {
     float: left;
     background-color: #FFFFFF;
