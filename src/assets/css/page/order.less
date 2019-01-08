@@ -1,0 +1,68 @@
+@import './../lib/base.less';
+
+.container() {
+  width: 1230px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.main-container-none {
+  .container();
+}
+
+.main-container {
+  background-color: #FFFFFF;
+  .container();
+}
+
+.right-container {
+  float: left;
+  width: 980px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+.right-container {
+  .layui-tab {
+    margin: 0;
+    .layui-this {
+      border-top: 2px solid @theme;
+      color: @theme;
+    }
+  }
+  .layui-tab-title li {
+    padding: 0 40px;
+  }
+  .layui-tab-content {
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+}
+
+.order-container {
+  width: 900px;
+  padding-bottom: 20px;
+  .close-box {
+    overflow: hidden;
+    padding-bottom: 10px;
+    .close {
+      width: 26px;
+      height: 26px;
+      text-align: center;
+      background-color: #D8D8D8;
+      color: #FFFFFF;
+      border-radius: 100%;
+      font-size: 30px;
+      line-height: 26px;
+      float: right;
+    }
+  }
+  .card {
+    border: 1px solid #D8D8D8;
+    .top {
+      background-color: #F2F3F7;
+      overflow: hidden;
+    }
+  }
+}
